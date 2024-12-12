@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Frontend Radio Browser",
-  description:
-    "Remember what it used to be in old times, listening to your favorite radio.",
-};
+import Sidebar from "./_components/sidebar";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { RadiosProvider } from "./_contexts/radios-context";
 
 const inter = Inter({
   subsets: ["latin"],
 });
+
+const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -19,7 +19,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <QueryClientProvider client={queryClient}>
+          <RadiosProvider>
+            <div className="flex min-h-full">
+              <div className="hidden lg:block">
+                <Sidebar />
+              </div>
+              {children}
+            </div>
+          </RadiosProvider>
+        </QueryClientProvider>
+      </body>
     </html>
   );
 }
