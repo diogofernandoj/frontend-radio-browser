@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Radio Browser App
 
-## Getting Started
+Este é um projeto de um navegador de rádios que permite ao usuário explorar estações de rádio, gerenciar favoritos e ouvir suas rádios preferidas diretamente no navegador. O projeto foi desenvolvido como parte de um desafio da Coodesh.
 
-First, run the development server:
+## Tecnologias utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Linguagem**: TypeScript
+- **Framework**: Next.js
+- **UI**: Shadcn/UI e TailwindCSS
+- **Gerenciamento de estado**: Context API
+- **Armazenamento local**: LocalStorage
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Casos de uso implementados
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Adicionar/remover rádios na lista de favoritos.
+2. Ver lista de rádios favoritos.
+3. Ouvir música da rádio apertando o botão Play.
+4. Pausar a música da rádio apertando o botão Pause.
+5. Pesquisar rádios por nome, país ou idioma.
 
-## Learn More
+## Como instalar e usar o projeto
 
-To learn more about Next.js, take a look at the following resources:
+### Pré-requisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js instalado na versão 16 ou superior.
+- Gerenciador de pacotes `npm` ou `yarn`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Passos para instalação
 
-## Deploy on Vercel
+1. Clone o repositório:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/diogofernandoj/frontend-radio-browser.git
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+4. Acesse a aplicação no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## Referência
+
+Este projeto é um **challenge by [Coodesh](https://coodesh.com/)**.
