@@ -2,6 +2,8 @@
 
 Este é um projeto de um navegador de rádios que permite ao usuário explorar estações de rádio, gerenciar favoritos e ouvir suas rádios preferidas diretamente no navegador. O projeto foi desenvolvido como parte de um desafio da Coodesh.
 
+- Acesse o projeto: https://frontend-radio-browser-liard.vercel.app/
+
 ## Tecnologias utilizadas
 
 - **Linguagem**: TypeScript
