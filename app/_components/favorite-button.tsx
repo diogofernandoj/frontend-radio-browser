@@ -4,12 +4,18 @@ import { HeartIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { RadioDTO } from "../_contexts/radios-context";
 import { useRadiosContext } from "../_hooks/use-radios-context";
+import { toast } from "sonner";
 
 const FavoriteButton = ({ radio }: { radio: RadioDTO }) => {
   const { toggleFavorite } = useRadiosContext();
 
   const handleFavoriteClick = () => {
     toggleFavorite(radio);
+    if (!radio.favorite) {
+      return toast.success("Radio adicionado à sua lista de favoritos!");
+    } else {
+      return toast.success("Radio removido da sua lista de favoritos!");
+    }
   };
 
   return (

@@ -5,6 +5,7 @@ import "./globals.css";
 import Sidebar from "./_components/sidebar";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RadiosProvider } from "./_contexts/radios-context";
+import { Toaster } from "./_components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
               </div>
               {children}
             </div>
+            <Toaster />
           </RadiosProvider>
         </QueryClientProvider>
       </body>
