@@ -1,18 +1,36 @@
 import { useCallback } from "react";
 
 export default function useLocalStorage() {
-  const saveItem = useCallback((key: string, value: any) => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, []);
+  const isClient = typeof window !== "undefined";
 
-  const getItem = useCallback((key: string) => {
-    const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : null;
-  }, []);
+  const saveItem = useCallback(
+    (key: string, value: any) => {
+      if (isClient) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+    },
+    [isClient]
+  );
 
-  const removeItem = useCallback((key: string) => {
-    localStorage.removeItem(key);
-  }, []);
+  const getItem = useCallback(
+    (key: string) => {
+      if (isClient) {
+        const value = localStorage.getItem(key);
+        return value ? JSON.parse(value) : null;
+      }
+      return null;
+    },
+    [isClient]
+  );
+
+  const removeItem = useCallback(
+    (key: string) => {
+      if (isClient) {
+        localStorage.removeItem(key);
+      }
+    },
+    [isClient]
+  );
 
   return { saveItem, getItem, removeItem };
 }
