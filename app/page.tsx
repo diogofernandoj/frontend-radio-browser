@@ -5,6 +5,7 @@ import { DataTable } from "./_components/data-table";
 import { Loader2Icon } from "lucide-react";
 import { useRadiosContext } from "./_hooks/use-radios-context";
 import { Input } from "./_components/ui/input";
+import SidebarSheetButton from "./_components/sidebar-sheet-button";
 
 const HomePage = () => {
   const {
@@ -31,6 +32,7 @@ const HomePage = () => {
 
   return (
     <div className="h-full w-full space-y-8 rounded-lg p-8">
+      <SidebarSheetButton />
       <div className="flex w-full flex-col lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-1">
           <span className="text-xs font-semibold text-gray-500">

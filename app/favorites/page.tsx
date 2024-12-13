@@ -2,6 +2,7 @@
 
 import { columns } from "../_components/columns";
 import { DataTable } from "../_components/data-table";
+import SidebarSheetButton from "../_components/sidebar-sheet-button";
 import { useRadiosContext } from "../_hooks/use-radios-context";
 
 export default function FavoritesPage() {
@@ -11,6 +12,7 @@ export default function FavoritesPage() {
 
   return (
     <div className="h-full w-full space-y-8 rounded-lg p-8">
+      <SidebarSheetButton />
       <div className="flex w-full flex-col lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-1">
           <span className="text-xs font-semibold text-gray-500">
